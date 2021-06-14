@@ -10,7 +10,7 @@ public class Box {
     }
 
     public boolean add(Fruit fruit){
-        if (fruits.size()>0)
+        if (!fruits.isEmpty())
         {
             if (fruits.get(0).getClass().getName()!=fruit.getClass().getName()){
                 System.out.println("В коробке лежат "+fruits.get(0).getClass().getName());
@@ -50,7 +50,7 @@ public class Box {
 
     @Override
     public String toString() {
-        if (fruits.size()==0) return "пустая;";
+        if (fruits.isEmpty()) return "пустая;";
         return " "+fruits.size()+" "+fruits.get(0).getClass().getName();
 
     }

@@ -24,11 +24,11 @@ public class Main {
         array[index2]=temp;
     }
 
-    public static ArrayList<Object> convert(Object[] array){
-        ArrayList<Object> result = new ArrayList();
+    public static <T> ArrayList<T> convert(T[] array){
+        ArrayList<T> result = new ArrayList();
         for (Object element:array)
         {
-            result.add(element);
+            result.add((T) element);
         }
         return result;
     }
@@ -36,6 +36,7 @@ public class Main {
     public static void main(String[] args) {
         //задача 1
         Integer[] abs = {1,2,3,4,5,6,7,8,9};
+        printArray(abs);
         Job1(abs,0,1);
         Job1(abs,8,7);
         printArray(abs);
